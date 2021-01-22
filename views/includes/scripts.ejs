@@ -1,0 +1,61 @@
+<!-- START: Scripts -->
+  <!-- Object Fit Polyfill -->
+  <script src="vendor/object-fit-images/dist/ofi.min.js"></script>
+  <!-- Popper -->
+  <script src="vendor/popper.js/dist/umd/popper.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Validator -->
+  <script src="vendor/bootstrap-validator/dist/validator.min.js"></script>
+  <!-- ImagesLoaded -->
+  <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <!-- Swiper -->
+  <script src="vendor/swiper/dist/js/swiper.min.js"></script>
+  <!-- Animejs -->
+  <script src="vendor/animejs/lib/anime.min.js"></script>
+  <!-- Rellax -->
+  <script src="vendor/rellax/rellax.min.js"></script>
+  <!-- Countdown -->
+  <script src="vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+  <!-- Moment.js -->
+  <script src="vendor/moment/min/moment.min.js"></script>
+  <script src="vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+  <!-- Isotope -->
+  <script src="vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+  <!-- Jarallax -->
+  <script src="vendor/jarallax/dist/jarallax.min.js"></script>
+  <script src="vendor/jarallax/dist/jarallax-video.min.js"></script>
+  <!-- Fancybox -->
+  <script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+  <!-- Themebau -->
+  <script src="javascripts/themebau.min.js"></script>
+
+  <script>
+    $('form').on('submit', (e) => {
+      const name = $('#name').val().trim();
+      const email = $('#email').val().trim();
+      const phone = $('#phone').val().trim();
+      const company = $('#company').val().trim();
+      const projectType = $('#project-type').val().trim();
+      const budget = $('#budget').val().trim();
+      const title = $('#title').val().trim();
+      const message = $('#message').val().trim();
+    
+      const data = {
+        name, 
+        email,
+        phone,
+        company,
+        projectType,
+        budget,
+        title,
+        message
+      };
+
+      $.post('/contact', data, function() {
+        console.log('Server received our data');
+      });
+    });
+  </script>
+<!-- END: Scripts -->

@@ -1,0 +1,197 @@
+<script>
+                function initMap()
+                {
+                    const uluru = {
+                        lat: 40.703436,
+                        lng: -74.012715
+                    };
+                    const map = new google.maps.Map(document.getElementById('map'),
+                    {
+                        zoom: 14,
+                        scrollwheel: false,
+                        mapTypeControl: false,
+                        streetViewControl: false,
+                        center: uluru,
+                        zoomControl: true,
+                        zoomControlOptions:
+                        {
+                            position: google.maps.ControlPosition.LEFT_TOP
+                        },
+                        styles: [
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                            {
+                                "saturation": 36
+                            },
+                            {
+                                "color": "#171717"
+                            },
+                            {
+                                "lightness": 40
+                            }]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 16
+                            },
+                            {
+                                "weight": "0.01"
+                            }]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.icon",
+                            "stylers": [
+                            {
+                                "visibility": "off"
+                            }]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                            {
+                                "lightness": 20
+                            }]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                            {
+                                "weight": 1.2
+                            }]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "geometry",
+                            "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#cbcbcb"
+                            }]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                            {
+                                "color": "#f7f7f7"
+                            }]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                            {
+                                "color": "#818181"
+                            },
+                            {
+                                "gamma": "3.01"
+                            }]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [
+                            {
+                                "color": "#f6f6f6"
+                            },
+                            {
+                                "lightness": 21
+                            }]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "geometry",
+                            "stylers": [
+                            {
+                                "color": "#dedede"
+                            },
+                            {
+                                "lightness": 21
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 17
+                            }]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 29
+                            },
+                            {
+                                "weight": 0.2
+                            }]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "geometry",
+                            "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 16
+                            }]
+                        },
+                        {
+                            "featureType": "transit",
+                            "elementType": "geometry",
+                            "stylers": [
+                            {
+                                "color": "#f2f2f2"
+                            },
+                            {
+                                "lightness": 19
+                            }]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [
+                            {
+                                "color": "#c2c2c2"
+                            },
+                            {
+                                "lightness": 17
+                            }]
+                        }]
+                    });
+                    const marker = new google.maps.Marker(
+                    {
+                        position: uluru,
+                        map: map,
+                        icon: 'assets/images/location-icon.svg'
+                    });
+                }
+            </script>
+            <!-- START: Google Map -->
+            <script src="https://maps.google.com/maps/api/js?key=AIzaSyC2_DS4J2s-Ir04ynrwnYqPz0R1GlyNPa8&callback=initMap"></script>
+            <!-- END: Google Map -->
